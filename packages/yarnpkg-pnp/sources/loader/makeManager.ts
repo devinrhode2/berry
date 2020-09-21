@@ -122,8 +122,8 @@ export function makeManager(pnpapi: PnpApi, opts: MakeManagerOptions) {
       next = ppath.dirname(curr);
     } while (curr !== PortablePath.root);
 
-    addToCache(start, curr, null);
-    return null;
+    addToCache(start, curr, initialApiPath);
+    return initialApiPath;
   }
 
   function getApiPathFromParent(parent: Module | null | undefined): PortablePath | null {

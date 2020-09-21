@@ -41610,8 +41610,8 @@ function makeManager(pnpapi, opts) {
       next = sources_path/* ppath.dirname */.y1.dirname(curr);
     } while (curr !== sources_path/* PortablePath.root */.LZ.root);
 
-    addToCache(start, curr, null);
-    return null;
+    addToCache(start, curr, initialApiPath);
+    return initialApiPath;
   }
 
   function getApiPathFromParent(parent) {
